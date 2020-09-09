@@ -10,6 +10,8 @@ public/answer_key
 # -------------------------------------------------
 cypress/integration/examples
 cypress/fixtures/
+cypress/screenshots/
+cypress/videos/
 
 # -------------------------------------------------
 # Misc CSS Caching
