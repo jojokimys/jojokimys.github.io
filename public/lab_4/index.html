@@ -8,67 +8,60 @@
 </head>
 <body>
     <div class="main">
-        
-        <div class="header">
-            <h1>Ye Sung Kim's Lab 4</h1>
-        </div>
-        
-        <div class="wrapper">
-            <div class="container">
-
-                <form 
-                    action="/api"
-                    method="post"
-                >
-                    <ul class= "flex-outer">
-                        <li>
-                            <label for="fname">First Name:</label>
-                            <input type="text" id="fname" name="user_first" maxlength="140"></input>
-                        </li>
-                        <li>
-                            <label for="lname">Last Name:</label>
-                            <input type="text" id="lname" name="user_last" maxlength="140"></input>
-                        </li>
-                        <li>
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="user_email"></input>
-                        </li>
-                        <li>
-                            <label for="phone">Phone:</label>
-                            <input type="tel" id="phone" name="user_phone"></input>
-                        </li>
-                        <li>
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" cols="33"></textarea>
-                        </li>
-                        <li>
-                            <p>Title</p>
-                            <ul class="flex-inner">
-                                <li>
-                                <label for="18-35">
-                                    <input type="radio" id="18-35" name="18-35" value="18-35" ></input>
-                                    18-35
-                                </label>
-                                </li>
-                                <li>
-                                <label for="35-30">
-                                    <input type="radio" id="35-30" name="35-30" value="35-30"></input>
-                                    35-30
-                                </label>
-                                </li>
-                                <li> 
-                                <label for="30-65"> 
-                                    <input type="radio" id="30-65" name="30-65" value="30-65"></input>
-                                    30-65 
-                                </label> 
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button type="submit">Send your message</button>
-                        </li>
-                    </ul>
-                </form>
+        <div class="content">
+            <div class="header">
+                <h1>Ye Sung Kim's Lab 4</h1>
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <form 
+                        action="/api"
+                        method="post"
+                    >
+                        <ul class="flex-outer">
+                            <li>
+                                <label for="fname" class="aside">First Name</label>
+                                <input type="text" id="fname" name="user_first" maxlength="140"></input>
+                            </li>
+                            <li>
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="user_last" maxlength="140"></input>
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="user_email"></input>
+                            </li>
+                            <li>
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="user_phone"></input>
+                            </li>
+                            <li>
+                                <label for="message">Text field</label>
+                                <textarea id="message" name="message" rows="5" cols="33"></textarea>
+                            </li>
+                            <li>
+                                <p>Age</p>
+                                <ul class="flex-inner">
+                                    <li>
+                                        <input type="checkbox" id="eighteen-to-thirtyfive">
+                                        <label for="eighteen-to-thirtyfive">18-35</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="thirtyfive-to-fifty">
+                                        <label for="thirtyfive-to-fifty">35-50</label>
+                                    </li>
+                                    <li> 
+                                        <input type="checkbox" id="fifty-to-sixtyfive">
+                                        <label for="fifty-to-sixtyfive">50-65</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <button class="button" type="submit">Send your message</button>
+                            
+                        </ul>
+                    </form>
+                    
+                </div>
             </div>
         </div>
         
