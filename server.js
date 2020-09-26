@@ -15,6 +15,7 @@ app.route('/api')
     console.log('GET request detected');
   })
   .post((req, res) => {
+    res.send('<p>hello world</p>')
     console.log('POST request detected');
   });
 
