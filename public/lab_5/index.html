@@ -23,16 +23,16 @@
                     <li><label for="message">Text field</label>
                         <textarea name="message" id="message" cols="33" rows="10">This is some default message text.</textarea></li>
                     <li>
-                        <p>
+                        <p class="checkbox-list-label" >
                             Age
                         </p>
                         <ul class='flex-inner'>
                             <li><input type="checkbox" id="eighteen-thirtyfive" name="age">
-                                <label class="checkbox-list-label" for="eighteen-thirtyfive">18-35</label></li>
+                                <label for="eighteen-thirtyfive">18-35</label></li>
                             <li><input type="checkbox" id="thirtyfive-fifty" name="age">
-                                <label class="checkbox-list-label" for="thirtyfive-fifty">35-50</label></li>
+                                <label for="thirtyfive-fifty">35-50</label></li>
                             <li><input type="checkbox" id="fifty-sixtyfive" name="age">
-                                <label class="checkbox-list-label" for="fifty-sixtyfive">50-65</label></li>
+                                <label for="fifty-sixtyfive">50-65</label></li>
                         </ul>
                     </li>
                     <li>
@@ -50,8 +50,13 @@
         .then((response) => {
             document.title = response;
             document.body.style.backgroundColor = "#98FB98";
-
             document.getElementById("header_text").innerHTML = response;
+            document.querySelector('.checkbox-list-label').innerHTML = 'Fruits';
+            const Fruits = ['apple', 'orange', 'peach'];
+            const checks = document.querySelectorAll('.flex-inner label')
+            checks.forEach((c, i) => c.innerHTML = Fruits[i]);
+            
+            document.querySelector('.flex-outer').style.margin = '0 auto';
         })
     }
     </script>
