@@ -6,11 +6,16 @@ body {
   color: #444;
   padding: 0 10px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 00fe1777fa62b0bcd56987b128f946baff0e98d7
 h1,
 h2,
 h3 {
   line-height: 1.2;
 }
+<<<<<<< HEAD
 a {
 color: rgb(53 91 202);
 }
@@ -18,3 +23,17 @@ color: rgb(53 91 202);
 a:visited{
     color:rgb(133 101 255);
 }
+=======
+
+a {
+  color: rgb(53 91 202);
+}
+
+a:visited{
+  color:rgb(133 101 255);
+}
+
+img {
+  max-width: 100%;
+}
+>>>>>>> 00fe1777fa62b0bcd56987b128f946baff0e98d7
