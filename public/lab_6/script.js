@@ -1,5 +1,10 @@
 // You may wish to find an effective randomizer function on MDN.
 
+// const { reverse } = require("cypress/types/lodash");
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function range(int) {
   const arr = [];
   for (let i = 0; i < int; i += 1) {
@@ -29,8 +34,25 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
-      console.log('fromServer', fromServer);
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-inner').remove();
+      }
+      const numbers = Array(100).fill().map((item, index) => index + 1);
+      numbers.sort(() => Math.random() - 0.5);
+
+      const newArr2 = numbers.slice(0, 10).map((num) => fromServer[num]);
+
+      const reverseList = newArr2.sort((a, b) => b.name.localeCompare(a.name));
+      const ol = document.createElement('ol');
+      ol.className = 'flex-inner';
+      
+      reverseList.forEach((el, i) => {
+        const li = document.createElement('li');
+        $(li).append(`<input type="checkbox" value=${el.code} id=${el.code} />`);
+        $(li).append(`<label for=${el.code}>${el.name}</label>`);
+        $(ol).append(li);
+      });
+      document.querySelector('.header').after(ol);
     })
     .catch((err) => console.log(err));
 });
