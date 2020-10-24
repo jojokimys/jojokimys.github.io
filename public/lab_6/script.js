@@ -37,7 +37,7 @@ document.body.addEventListener('submit', async (e) => {
       if (document.querySelector('.flex-inner')) {
         document.querySelector('.flex-inner').remove();
       }
-      const numbers = Array(100).fill().map((item, index) => index + 1);
+      const numbers = Array(243).fill().map((item, index) => index + 1);
       numbers.sort(() => Math.random() - 0.5);
 
       const newArr2 = numbers.slice(0, 10).map((num) => fromServer[num]);
