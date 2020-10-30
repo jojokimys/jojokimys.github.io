@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+<h1>collections page coming soon...</h1>
+<style>
+    
+</style>
+<div class="container">
+    <div>
+        <ul id="collection_list">
+
+        </ul>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var link_header = "https://nomad206.cafe24.com/web/"
+    // 추가방법. 
+    // 파일업로더에 추가하려는 폴더 와 개수를 ["폴더명", 이미지수 ] 형태로 입력.
+	var season_arr = [
+        ["17fw", 30], 
+        ["17fw capsule", 19], 
+        ["17ss", ], 
+        ["17ss capsule", 30], 
+        ["18wt",], 
+        ["18fw",], 
+        ["18ww",], 
+        ["18ss", 20],
+        ["18summer", 20], 
+        ["19fw", 20], 
+        ["20SUM", 20], 
+        ["20fw", 20], 
+        ["20ss", 20], 
+    ]
+    
+    var clist = document.getElementById("collection_list");
+
+    season_arr.forEach((item) => {
+        let temp = document.createElement("li");
+        temp.innerHTML() = item[0];
+        clist.appendChild("li", temp);
+    });
+
+    console.log(encodeURIComponent(season_arr[1]))
+
+
+</script>
+
+<div module="Layout_Dummy"></div>

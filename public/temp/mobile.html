@@ -1,0 +1,253 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--@js(/layout/basic/js/countdown_start.js)-->
+<!--@js(/layout/basic/js/jquery.plugin.min.js)-->
+<!--@js(/layout/basic/js/jquery.countdown.min.js)-->
+<div module="Popup_MultiPopup">
+	<!--
+		$banner_popup_no =
+		※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+	-->
+	{$popup}
+</div>
+<div module="Popup_MultiBanner">
+	<!--
+		$banner_popup_no =
+		※ 노출시킬 배너의 ID를 숫자로 넣어주세요.
+	-->
+	{$banner}
+</div>
+
+<div class="mainBanner" module="Mobile_Banner">
+    <!--
+        $swipe = yes
+        $custom = no
+    -->
+    <ul>
+        <li><a href="{$banner_link_url}"><img src="{$banner_image_url}" width="100%" alt=""></a></li>
+        <li class="afterNone"><a href="{$banner_link_url}"><img src="{$banner_image_url}" width="100%" alt=""></a></li>
+    </ul>
+</div> 
+
+
+<div class="cboth visual" style="height:100%;"><!-- 메인 이미지 링크 수정하는곳 -->
+    <div app4you-smart-banner="smart-banner-admin-MO00001" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-MO00001" data-banner-name="상단배너 영역">
+        <div style="height:283px;">
+    		<a href="#"><img src="/images/main01.jpg" style="display:none;" height="283px" width="100%"></a>
+        </div>
+    </div>
+</div><!-- //main_slide -->
+
+
+<div class="cboth main_title">#수분촉촉 이야기 -</div><!-- 메인 배너 타이틀 수정하는곳 -->
+<div class="cboth main_video" style="height:100%;">
+	<div app4you-smart-banner="smart-banner-admin-MO00002" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-MO00002" data-banner-name="중단배너 영역">
+		<div style="height:137px;">
+        	<a href="#"><img src="/images/main_video.jpg" style="display:none;" height="137px" width="100%"></a>
+    	</div>
+	</div>
+</div><!-- 메인 배너 링크 수정하는곳 -->
+
+<div class="cboth main_title">당신에게 추천해드려요-</div><!-- 메인 추천상품 타이틀 수정하는곳 -->
+<div class="ec-base-product typeThumb" module="product_listmain_1">
+    <!--
+        $count = 4
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $moreview = yes
+        $cache = yes
+    -->
+    <ul class="prdList grid2">
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span><span id="span_product_price_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                        </div>
+                    </li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span><span id="span_product_price_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+                    <li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                        </div>
+                    </li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+<div module="product_listmore_1" class="ec-base-paginate typeMoreview">
+    <a href="#none" onclick="{$more_action}" class="btnMore">
+        제품 더보기 <span id="more_current_page_{$display_group}">{$current_page}</span>/<span id="more_total_page_{$display_group}">{$total_page}</span>
+        <span class="icoMore"></span>
+    </a>
+</div>
+
+
+<div class="cboth main_title">당분간 할인해요-</div><!-- 메인 할인상품 타이틀 수정하는곳 -->
+<div class="ec-base-product typeThumb" module="product_listmain_2">
+    <!--
+        $count = 2
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $moreview = yes
+        $cache = y1es
+    -->
+    <ul class="prdList grid2">
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span><span id="span_product_price_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                        </div>
+                    </li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+				<div class="timesale_box {$product_sale_display|display}"><span class="saletime"></span><span class="sale_per"></span></div>
+                <div class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></div>
+				<div class="summary_desc {$summary_desc|display}">{$summary_desc}</div>
+                <ul class="spec">
+					<li class="price_custom" id="custom{$disp_product_custom|numberformat}"><strike>{$disp_product_custom}</strike></li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price} <span class="{$product_price_ref_display|display}">{$txt_product_price_ref}</span><span id="span_product_price_text">{$product_tax_type_text}</span></li>
+                    <li class="price sale {$product_sale_display|display}">{$product_sale_price}</li>
+					<li class="price {$product_promotion_display|display}" style="padding:0;margin:0;">
+						<div class="discountPeriod {$product_promotion_display|display}">
+							<div class="layerDiscountPeriod">
+								<div class="inner">
+									<ul>
+										<li>{$product_promotion_dc_price}</li>
+										<li>{$product_promotion_start_date} ~ {$product_promotion_end_date}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="color {$colorchip_display|display}">
+                        <div module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                            <span class="chips" style="background-color:{$color};" {$color_image}></span>
+                        </div>
+                    </li>
+					<li class="icon">{$soldout_icon} {$stock_icon} {$new_icon} {$recommend_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon}<strong>{$disp_likeprd_count}</strong></button></li>
+                </ul>
+			</div>
+        </li>
+    </ul>
+</div>
+<div module="product_listmore_2" class="ec-base-paginate typeMoreview">
+    <a href="#none" onclick="{$more_action}" class="btnMore">
+        제품 더보기 <span id="more_current_page_{$display_group}">{$current_page}</span>/<span id="more_total_page_{$display_group}">{$total_page}</span>
+        <span class="icoMore"></span>
+    </a>
+</div>
+
+<div class="cboth main_title">두번 다시 없을 이벤트 -</div><!-- 메인 하단배너 수정하는곳 -->
+<div class="cboth main_banner" style="height:100%;">
+	<div app4you-smart-banner="smart-banner-admin-MO00003" class="-xans-element- xans-smart-banner-admin xans-smart-banner-admin-MO00003" data-banner-name="이벤트배너 영역">
+        <div style="height:120px;">
+        	<a href="#"><img src="/images/main_banner.jpg" style="display:none;" height="120px" width="100%"></a>
+        </div>
+	</div>
+</div>
+
+<p module="Layout_attendBanner">
+<!--@css(/css/module/layout/attendBanner.css)-->
+    <!--
+        $stamp_type_url = /attend/stamp.html
+        $comment_type_url = /attend/comment.html
+    -->
+    <a href="{$attend_url}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bnr_attend.png" alt="출석체크 이벤트(매일매일 출석도장 쾅쾅쾅!)"></a>
+</p>

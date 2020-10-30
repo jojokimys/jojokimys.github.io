@@ -3,110 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Duckdive</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    <!-- <div class="header">
-        <div class="video">
-            <iframe src="https://player.vimeo.com/video/467354874?autoplay=1&loop=1" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-        
-        <div class="banner-long">
-            <a href="/product/duckdive-original.html?cate_no=104">
-                <img src="https://nomad206.cafe24.com/banner/banner-long-text.jpg" alt="banner-long"/>
-            </a>
-        </div>
-        <div class="categories">
-            <ul>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <h1>Outer</h1>
-                        <img src="http://skin-skin18--shop1.nomad206.cafe24.com/web/product/medium/20200408/2906e5b96e1b016a8c2b5b4341fd127a.jpg" alt="banner-long"/>
-                    </a>
-                </li>
-            </ul>    
-        </div>
-    </div> -->
-    
-    <div class="collection-grid">
-        <h1>DUCKDIVE Collections</h1>
-        <ul id="collection-list" >
-
-        </ul>
+    <div class="vid-container">
+        <video width="100%" height="100%" controls autoplay>
+            <source src="https://www.yfyfilmmakers.com/wp-content/uploads/2020/10/20200914_DUCKDIVE_01_DISSECTION_1.mp4" type="video/mp4">
+        </video>
     </div>
+    <div class="categories">
+        <ul id="categories-list">
+            
+        </ul>    
+    </div>
+    <div class="banner-long">
+        <a id="banner-link" href="/product/duckdive-original.html?cate_no=104">
+            <img 
+                id="banner-img" 
+                src="https://nomad206.cafe24.com/banner/banner-long-text.jpg" 
+                alt="banner-image"
+            />
+        </a>
+    </div>
+     
     
     <script type="text/javascript">
         
-        var season_arr = [
-            ["2017 F/W", "17fw", "https://nomad206.cafe24.com/web/17fwcapsule/1.jpg"], 
-            ["2017 F/W capsule", "17fwcapsule", "https://nomad206.cafe24.com/web/17fwlook/1.jpg"], 
-            ["2017 SS Capsule", "17sscapsule", "https://nomad206.cafe24.com/web/17ss%20capsule/1.jpg"], 
-            ["2017 SS Part 1", "17ssp1", "https://nomad206.cafe24.com/web/17ss%20part1/1.jpg"], 
-            ["2018 WT", "18wt", "https://nomad206.cafe24.com/web/18sslook/18WT/01.jpg"], 
-            // ["2018 F/W", "18fw", ""], 
-            ["2018 SS", "18ss", "https://nomad206.cafe24.com/web/18ss/01.jpg"],
-            ["2018 Summer", "18summer", "https://nomad206.cafe24.com/web/18summer/B1.%2B82.jpg"], 
-            ["2019 Summer", "19summer", "https://nomad206.cafe24.com/web/18summer/19summer/01.jpg"], 
-            ["2019 SS", "19ss", "https://nomad206.cafe24.com/web/18sslook/19SS/1.jpg"], 
-            ["2019 F/W", "19fw", "https://nomad206.cafe24.com/web/19fw/19FW-2.jpg"], 
-            ["2020 Summer", "20sum", "https://nomad206.cafe24.com/web/20SUM/0.jpg"], 
-            ["2020 SS", "20ss", "https://nomad206.cafe24.com/web/20ss/lookbook/1.jpg"], 
-            // ["2020 F/W","20fw", 20], 
+        // main page bottom section //
+        var category_arr = [
+            ["New Releases", "new", 104, "https://nomad206.cafe24.com/banner/banner-long-text.jpg"],
+            ["Outer", "outer", 74, "https://nomad206.cafe24.com/banner/outer.jpg"],
+            ["Top", "top", 75, "https://nomad206.cafe24.com/banner/top.jpg"],
+            ["Bottom", "bottom", 76, "https://nomad206.cafe24.com/banner/bottom.jpg"],
+            ["Bag", "bag", 77, "https://nomad206.cafe24.com/banner/bag.jpg"],
+            ["Hat", "hat", 78, "https://nomad206.cafe24.com/banner/hat.jpg"],
+            ["Shoes", "shoes", 80, "https://nomad206.cafe24.com/banner/shoes.jpg"],
         ]
+        var category = document.getElementById("categories-list");
         
-        season_arr.reverse();
+        function onClickFunc(item) {
+            let link = document.getElementById("banner-link");
+            let img = document.getElementById("banner-img");
 
-        let list = document.getElementById("collection-list")
+            link.href = "/product/list.html?cate_no=" + item[2].toString();
+            img.src = ""+ item[3];
+        }
 
-        season_arr.forEach((item, index) => {
-            let newElem = document.createElement("li");
-            let newImg = document.createElement("img");
-            newImg.alt = "collection_img_" + index.toString();
-            newImg.src = item[2];
+        category_arr.forEach((item) => {
+            let li = document.createElement("li");
+            let button = document.createElement("button");
+            li.id = "button-"+item[1];
+            button.innerText = item[0];
+            button.onclick=()=>onClickFunc(item);
+            li.appendChild(button);
+            category.appendChild(li);
+        })
+        
+        document.getElementById("button-new").focus = true;
 
-            let newP = document.createElement("h2");
-            newP.innerHTML = item[0];
+        // main page bottom section //
 
-            let newA = document.createElement("a");
-            newA.href = "./view.html?s="+ item[1];
-            newA.appendChild(newImg);
-            newA.appendChild(newP);
+        // // collections section //
+        // var season_arr = [
+        //     ["2017 F/W", "17fw", "https://nomad206.cafe24.com/web/17fwcapsule/1.jpg"], 
+        //     ["2017 F/W capsule", "17fwcapsule", "https://nomad206.cafe24.com/web/17fwlook/1.jpg"], 
+        //     ["2017 SS Capsule", "17sscapsule", "https://nomad206.cafe24.com/web/17ss%20capsule/1.jpg"], 
+        //     ["2017 SS Part 1", "17ssp1", "https://nomad206.cafe24.com/web/17ss%20part1/1.jpg"], 
+        //     ["2018 WT", "18wt", "https://nomad206.cafe24.com/web/18sslook/18WT/01.jpg"], 
+        //     // ["2018 F/W", "18fw", ""], 
+        //     ["2018 SS", "18ss", "https://nomad206.cafe24.com/web/18ss/01.jpg"],
+        //     ["2018 Summer", "18summer", "https://nomad206.cafe24.com/web/18summer/B1.%2B82.jpg"], 
+        //     ["2019 Summer", "19summer", "https://nomad206.cafe24.com/web/18summer/19summer/01.jpg"], 
+        //     ["2019 SS", "19ss", "https://nomad206.cafe24.com/web/18sslook/19SS/1.jpg"], 
+        //     ["2019 F/W", "19fw", "https://nomad206.cafe24.com/web/19fw/19FW-2.jpg"], 
+        //     ["2020 Summer", "20sum", "https://nomad206.cafe24.com/web/20SUM/0.jpg"], 
+        //     ["2020 SS", "20ss", "https://nomad206.cafe24.com/web/20ss/lookbook/1.jpg"], 
+        //     // ["2020 F/W","20fw", 20], 
+        // ]
+        
+        // season_arr.reverse();
+
+        // let list = document.getElementById("collection-list")
+
+        // season_arr.forEach((item, index) => {
+        //     let newElem = document.createElement("li");
+        //     let newImg = document.createElement("img");
+        //     newImg.alt = "collection_img_" + index.toString();
+        //     newImg.src = item[2];
+
+        //     let newP = document.createElement("h2");
+        //     newP.innerHTML = item[0];
+
+        //     let newA = document.createElement("a");
+        //     newA.href = "./view.html?s="+ item[1];
+        //     newA.appendChild(newImg);
+        //     newA.appendChild(newP);
             
-            newElem.appendChild(newA);
-            list.appendChild(newElem)
-        });
-        
+        //     newElem.appendChild(newA);
+        //     list.appendChild(newElem)
+        // });
+        // // collections section //
 
     </script>
     
