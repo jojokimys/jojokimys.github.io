@@ -48,20 +48,20 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
           {
             startValue: 40,
             endValue: 50,
-            color: "orange",
-            type: "zigzag"
+            color: 'orange',
+            type: 'zigzag'
           },
           {
             startValue: 85,
             endValue: 100,
-            color: "orange",
-            type: "zigzag"
+            color: 'orange',
+            type: 'zigzag'
           },
           {
             startValue: 145,
             endValue: 175,
-            color: "orange",
-            type: "zigzag"
+            color: 'orange',
+            type: 'zigzag'
           },
         ]
       } // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
